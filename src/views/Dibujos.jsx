@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import { useLanguage } from '../context/LanguageContext';
 
 // Array de imágenes
 const images = Array.from({ length: 22 }, (v, i) => ({
@@ -17,6 +18,7 @@ const breakpointColumnsObj = {
 };
 
 function Dibujos() {
+  const { translations } = useLanguage();
   const [flippedImages, setFlippedImages] = useState(Array(22).fill(false));
 
   const handleFlip = (index) => {
@@ -28,7 +30,7 @@ function Dibujos() {
   return (
     <div>
       <div className='dibujos-title'>
-        <h1>Viajes en papel</h1>
+        <h1>{translations?.dibujos?.title}</h1>
       </div>
       <Masonry
         breakpointCols={breakpointColumnsObj}

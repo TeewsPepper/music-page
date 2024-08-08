@@ -1,9 +1,11 @@
 import React from "react"
+import { useLanguage } from "../context/LanguageContext"
 
 const Footer = () => {
+  const { translations } = useLanguage();
   return (
     <>
-        <p className="footer">AlvarengaGrooves 2024 &copy;Todos los derechos reservados</p>
+        <p className="footer">{translations.common.copyright}</p>
     </>
   )
 }

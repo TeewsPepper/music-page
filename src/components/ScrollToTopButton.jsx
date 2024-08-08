@@ -1,8 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const ScrollToTopButton = () => {
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
+  const { translations } = useLanguage(); // Obtén las traducciones del contexto
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +31,14 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      aria-label="Ir al inicio"
+      aria-label={translations.common.scrollToTop} // Usa la traducción aquí
       onClick={scrollToTop}
       className="scroll-btn"
-      name="Ir al inicio"
-      
-    >Ir arriba</button>
+    >
+      {translations.common.scrollToTop} {/* Usa la traducción aquí */}
+    </button>
   );
 };
 
 export default ScrollToTopButton;
+

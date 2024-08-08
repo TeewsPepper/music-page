@@ -1,0 +1,43 @@
+{
+    "common": {
+      "months": {
+        "january": "Enero",
+        "february": "Febrero",
+        "march": "Marzo",
+        "april": "Abril",
+        "may": "Mayo",
+        "june": "Junio",
+        "july": "Julio",
+        "august": "Agosto",
+        "september": "Septiembre",
+        "october": "Octubre",
+        "november": "Noviembre",
+        "december": "Diciembre"
+      },
+      "scrollToTop": "Ir Arriba",
+      "copyright": "AlvarengaGrooves 2024 ©Todos los derechos reservados"
+    },
+    "dibujos": {
+      "title": "Viajes en papel"
+      },
+   
+    
+    "music": {
+      "title": "El Ojo",
+      "audioTitles": {
+        "23": "23",
+        "Cosas": "Cosas",
+        "Desde lo más alto": "Desde lo más alto",
+        "El camino": "El camino",
+        "Gracias che": "Gracias che",
+        "La liberación del malvón": "La liberación del malvón",
+        "Maca": "Maca",
+        "Mi flor de Jacarandá": "Mi flor de Jacarandá",
+        "Nace una alegría": "Nace una alegría",
+        "Nueva era": "Nueva era",
+        "Once del once del once": "Once del once del once",
+        "Sara": "Sara"
+      }
+    }
+  }
+  

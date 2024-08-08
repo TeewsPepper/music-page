@@ -1,0 +1,40 @@
+{
+  "common": {
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "scrollToTop": "Go Up",
+    "copyright": "AlvarengaGrooves 2024 ©All rights reserved"
+  },
+  "dibujos": {
+    "title": "Paper Journeys"
+  },
+  "music": {
+    "title": "The Eye",
+    "audioTitles": {
+      "23": "23",
+      "Cosas": "Things",
+      "Desde lo más alto": "From the Highest",
+      "El camino": "The Path",
+      "Gracias che": "Thanks Che",
+      "La liberación del malvón": "The Liberation of the Geranium",
+      "Maca": "Maca",
+      "Mi flor de Jacarandá": "My Jacaranda Flower",
+      "Nace una alegría": "A Joy is Born",
+      "Nueva era": "New Era",
+      "Once del once del once": "Eleventh of the Eleventh of the Eleventh",
+      "Sara": "Sara"
+    }
+  }
+}

@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useLanguage } from '../context/LanguageContext';
 
 const Portada = () => {
+  const { language, switchLanguage, translations } = useLanguage();
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
@@ -11,32 +13,31 @@ const Portada = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const month = currentDate.toLocaleString("default", { month: "long" });
+  const monthIndex = currentDate.getMonth();
+  const monthNames = translations.common.months;
+  const monthKeys = Object.keys(monthNames);
+  const month = monthNames[monthKeys[monthIndex]] || monthKeys[monthIndex];
   const year = currentDate.getFullYear();
-  const hours = currentDate.getHours().toString().padStart(2, "0");
-  const minutes = currentDate.getMinutes().toString().padStart(2, "0");
-  const seconds = currentDate.getSeconds().toString().padStart(2, "0");
+  
   return (
     <>
       <div className="portada-container" data-testid="portada-content">
         
-          <h1>AlvarengaGrooves</h1>
-          <div className="contenedor-parrafo">
-
-            <p>WebTour-</p>
-            <p data-testid="date">
-              {month} {year} {/* - {hours}:{minutes}:{seconds} */}
-            </p>
-          </div>
-
-          
-        
-
-        
+        <h1>AlvarengaGrooves</h1>
+        <div className="contenedor-parrafo">
+          <p>WebTour /</p>
+          <p data-testid="date">
+            {month} {year}
+          </p>
+        </div>
         <div className="portada-imagen">
           <img className="franja-imagen" src="/assets/img/elojo.webp" alt="portada del disco el ojo" />
         </div>
       </div>
+      <div className="btn-translations">
+          <button onClick={() => switchLanguage('en')}>EN</button>
+          <button onClick={() => switchLanguage('es')}>ES</button>
+        </div>
     </>
   );
 };
